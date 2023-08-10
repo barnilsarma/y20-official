@@ -1,1 +1,73 @@
+.hero {
+  display: flex;
+  height: 100vh;
+  background-image: linear-gradient(129deg, #ffa12d 19.04%, #358717 91.43%);
+}
+.leftportion {
+  display: flex;
+  width: 50em;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 24em;
+  color: #fff;
+  font-weight: normal;
+}
+.toptxt {
+  color: #fff;
+  text-align: center;
+  font-family: Plus Jakarta Sans;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2em;
+  letter-spacing: -0.45px;
+}
+.bottomtxt {
+  color: #fff;
+  text-align: center;
+  font-family: Plus Jakarta Sans;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 2.25px;
+}
+.imagelogo {
+  flex-direction: row;
+  gap: 80px;
+  margin-top: 2.5em;
+  word-spacing: 5em;
+}
+#g20 {
+  width: 14em;
+  margin-right: 3.5rem;
+  background-image: radial-gradient(#ffffffd1, #ffffff47);
+  box-shadow: 0 0 100px #ffffff;
+  border: 0px solid transparent;
+  border-radius: 1em;
+}
+#think{
+  background-image: radial-gradient(#ffffffd1, #ffffff47);
+  box-shadow: 0 0 100px #ffffff;
+  border: 0px solid transparent;
+  border-radius: 1em;
+}
+
+.motto-container {
+  position: absolute;
+  top: 38em;
+  left: 31em;
+  bottom: 2em;
+}
+.motto-container img {
+  width: 35em;
+}
+.rightportion img {
+  width: 38em;
+  height: 40em;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
 
