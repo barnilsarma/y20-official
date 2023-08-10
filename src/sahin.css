@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root {
+    --container-width: 100vw;
+
+}
+
+/* utility classes */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hr{
+    width:20rem;
+    height: 0.4rem;
+    background-image: linear-gradient(to right, orange , green);
+}
+.heading{
+    justify-content: center;
+    color: green;
+}
+.themes {
+    /* margin-top: 20px; */
+    width: var(--container-width);
+    display: flex;
+    margin-inline: auto; 
+    height: 100vh;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 200px;
+    overflow:hidden;
+}
+
+.flower {
+    width: 37rem;
+    height: 35rem;
+    background: url(assets/flower-removebg-preview.png) no-repeat;
+    opacity: 50%;
+}
+
+.fl1 {
+    position: absolute;
+    left: -18rem;
+}
+
+.fl2 {
+    position: absolute;
+    right: -25rem;
+}
+
+.theme {
+    /* margin-top: 10%; */
+    width:90%;
+    align-items: center;
+    gap: 6rem;
+    height:70%;
+    justify-content: center;
+}
+.box{
+    z-index: 2;
+    padding-block: 2rem;
+    padding-inline: 2.5rem;
+    letter-spacing: 0.12rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.box1{
+    font-size: 3rem;
+    height: 55%;
+    width:40%;
+    color: rgb(255, 111, 0);
+    row-gap: 1.2rem;
+}
+.box2{
+    width:40%;
+    height: 65%;
+    line-height: 1.4rem;
+    font-size: 1.3rem;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.779);
+    border:1px solid none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(161, 161, 161, 0.733);
+}
