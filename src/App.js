@@ -95,20 +95,34 @@ function Events() {
 function Theme() {
   return (
     <div>
-      <div>
-        <h1>THEME</h1>
+     <div className="themes flex container">
+      <div className="flower flex fl1"></div>
+      <div className="theme flex">
+        <div className="box1 flex box">
+            <div className="heading flex">
+                <div className="hr flex"></div>
+                <b>THEME</b>
+                <div className="hr flex"></div>
+                
+            </div>
+            <p>"Beyond Horizons: Youth Powering Progress"</p>
+        </div>
+        <div className="box2 flex box">
+          <p>
+            In the heart of the mesmerizing North East, we converge to celebrate
+            the spirit of unity, diversity, and progress. The theme "Beyond
+            Horizons: Youth Powering Progress" encapsulates our collective
+            vision to transcend boundaries, break barriers, and chart a course
+            towards a prosperous future. Together, we embark on an inspirational
+            journey, exploring the untapped potential of the North East and
+            unleashing the force of youth to drive positive transformations
+            across the region.
+          </p>
+        </div>
       </div>
-      <div></div>
-      <p>"Beyond Horizons:Youth Powering Progress"</p>
-      <div>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, id
-        quod inventore voluptatibus impedit labore quos fugiat temporibus at
-        quae accusantium explicabo eum architecto amet autem porro sint modi
-        alias exercitationem dolorum laudantium maiores? Magni, similique
-        asperiores molestias illo doloribus, nesciunt quia aperiam nostrum
-        blanditiis a, dicta praesentium quis quaerat?Lorem ipsum dolor sit, amet
-        consectetur adipisicing elit. Quidem, libero?
-      </div>
+      <div className="flower flex fl2"></div>
+    </div>
+    <div className="scroller flex"></div>
     </div>
   );
 }
