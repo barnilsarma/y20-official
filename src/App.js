@@ -268,15 +268,23 @@ function OrganisingInstitutes() {
     { name: "National Institute of Technology, Silchar", logo: "nitslogo" },
     { name: "Assam University, Silchar", logo: "aulogo" },
   ];
-  return (
+ return (
     <div className="Organising">
-      <h1>Organising Institutes</h1>
-      {inst.map((institute) => (
-        <div className="insititute">
-          <img src={institute.logo} />
-          <label>{institute.name}</label>
+      <center>
+        <div className="surrounder">
+          <img src={Surround} />
+          <h1>Organising Institutes</h1>
+          <img src={Surround} />
         </div>
-      ))}
+      </center>
+      <div className="Organise">
+        <div className="left-logo">
+            <img src={nitlogo} alt="nitlogo"/>            
+        </div>
+        <div className="right-logo">
+            <img src={assamlogo} alt="aulogo"/> 
+        </div>
+    </div>
     </div>
   );
 }
