@@ -9,14 +9,12 @@ function NavBar() {
   const navState = useRef(null);  
   useEffect(() => {
     window.onclick = function (e) {
-      console.log("clicked element: ", e.target)
       if (ham.current !== e.target) 
         navState.current.style.visibility = 'hidden';
     }
 
     ham.current.addEventListener('click', () => {
       navState.current.style.visibility = 'visible';
-      console.log("hamburger element: ", ham.current)
     })
   })
   return (
