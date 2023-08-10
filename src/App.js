@@ -1,5 +1,9 @@
 import "./App.css";
 import "./sahin.css";
+import "./swarup.css";
+import moto from "./moto.png";
+import g20 from "./G20logo.png";
+import think from "./ThinkIndialogo.png";
 import ThemeLeft from "./flower-removebg-preview.png";
 import ThemeRight from "./flower-removebg-preview-left.png";
 import ThemeFull from "./flower-full.svg";
@@ -167,16 +171,16 @@ function Theme() {
 function Hero() {
   return (
     <div className="hero">
-      <h1>
-        WELCOME TO <b>NORTHEAST Y20 CONCLAVE</b>
-      </h1>
-      <img alt="g20-img" />
-      <img alt="think-india-img" />
-      <img alt="vasudhaiva-kutumbakam" />
+      <div className="leftportion">
+        <h1 class="toptxt">WELCOME TO</h1>
+        <h1 class="bottomtxt">NORTHEAST Y20 CONCLAVE</h1>
+        <div class="imagelogo">
+          <img id="g20" src={g20} alt="G20 Logo" />
+          <img src={think} id="think" alt="ThinkIndia Logo" />
+        </div>
+      </div>
       <div className="motto-container">
-        <h2>ONE EARTH.</h2>
-        <h2>.ONE FAMILY.</h2>
-        <h2>.ONE FUTURE</h2>
+        <img src={moto} alt="moto" />
       </div>
     </div>
   );
