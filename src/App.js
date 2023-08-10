@@ -1,6 +1,6 @@
 import "./App.css";
-import "./sahin.css";
 import "./swarup.css";
+import "./sahin.css";
 import moto from "./moto.png";
 import g20 from "./G20logo.png";
 import think from "./ThinkIndialogo.png";
