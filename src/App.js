@@ -1,15 +1,24 @@
 import "./App.css";
 import Surround from "./surround.svg";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import NavLogo from "./NavLogo.svg";
+
+
 function NavBar() {
   const ham = useRef(null);
-  const navState = useRef(null);
-  const hamClick = () => {
-    navState.current.style.visibility === "hidden"
-      ? (navState.current.style.visibility = "visible")
-      : (navState.current.style.visibility = "hidden");
-  };
+  const navState = useRef(null);  
+  useEffect(() => {
+    window.onclick = function (e) {
+      console.log("clicked element: ", e.target)
+      if (ham.current !== e.target) 
+        navState.current.style.visibility = 'hidden';
+    }
+
+    ham.current.addEventListener('click', () => {
+      navState.current.style.visibility = 'visible';
+      console.log("hamburger element: ", ham.current)
+    })
+  })
   return (
     <>
       <nav>
@@ -17,7 +26,7 @@ function NavBar() {
           <img alt="logo" src={NavLogo} />
         </div>
 
-        <button id="hamburger" ref={ham} onClick={hamClick}>
+        <button id="hamburger" ref={ham}>
           X
         </button>
         <div className="links" ref={navState}>
