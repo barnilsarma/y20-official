@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 :root {
     --container-width: 100vw;
-
 }
 
+body{
+    overflow-x: hidden;
+}
 /* utility classes */
 .flex {
     display: flex;
@@ -17,55 +18,71 @@
 }
 
 .hr{
-    width:20rem;
+    width: 95%;
     height: 0.4rem;
     background-image: linear-gradient(to right, orange , green);
 }
 .heading{
+    width:20rem;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     color: green;
 }
+/* animations */
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+/* main */
 .themes {
-    /* margin-top: 20px; */
+    margin-top: 10vh;
     width: var(--container-width);
     display: flex;
-    margin-inline: auto; 
-    height: 100vh;
     justify-content:center;
     align-items: center;
-    margin-bottom: 200px;
-    overflow:hidden;
 }
 
 .flower {
-    width: 37rem;
     height: 35rem;
-    background: url(assets/flower-removebg-preview.png) no-repeat;
+    width: 18rem;
+    background-size: contain;
+    background-repeat: no-repeat;
     opacity: 50%;
+    /* animation: rotation 20s infinite linear; */
 }
 
 .fl1 {
+    background-image: url(assets/right\ flower.jpg);
+    transform: rotateY(180deg);
     position: absolute;
-    left: -18rem;
+    left: 0;
 }
 
 .fl2 {
+    background-image: url(assets/right\ flower.jpg);
     position: absolute;
-    right: -25rem;
+    right: 0;
 }
 
 .theme {
     /* margin-top: 10%; */
-    width:90%;
+    width:80%;
     align-items: center;
-    gap: 6rem;
-    height:70%;
-    justify-content: center;
+    gap: 8%;
+    margin:10vh;
+    justify-content: space-between;
 }
 .box{
     z-index: 2;
     padding-block: 2rem;
-    padding-inline: 2.5rem;
+    padding-inline: 3rem;
     letter-spacing: 0.12rem;
     justify-content: center;
     align-items: center;
@@ -74,14 +91,12 @@
 }
 .box1{
     font-size: 3rem;
-    height: 55%;
-    width:40%;
+    width:45%;
     color: rgb(255, 111, 0);
     row-gap: 1.2rem;
 }
 .box2{
-    width:40%;
-    height: 65%;
+    width:45%;
     line-height: 1.4rem;
     font-size: 1.3rem;
     -webkit-backdrop-filter: blur(5px);
@@ -89,5 +104,93 @@
     background-color: rgba(255, 255, 255, 0.779);
     border:1px solid none;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(161, 161, 161, 0.733);
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.349);
+}
+
+@media screen and (max-width:1080px) {
+    /* :root {
+        --container-width: 720px;
+    
+    } */
+    .theme {
+        justify-content: center;
+    }
+    .flower{
+        height: 25rem;
+        width:12rem;
+    }
+    .box{
+       width:70%;
+       
+    }
+    .box1{
+        font-size: 2rem;
+        row-gap: 3rem;
+    }
+    .box2{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width:720px) {
+    .theme {
+        justify-content: center;
+
+        width:90%;
+        margin: 0;
+        gap: 3rem;
+    }
+    .flower{
+        height: 25rem;
+        width:24rem;
+        background-image: url(assets/3489.jpg);
+        animation: rotation 20s infinite linear;
+    }
+    .fl1{
+        left: auto;
+        margin-inline: auto;
+        justify-self: center;
+    }
+    .fl2{
+        display: none;
+    }
+    .box{
+       width:80%;
+    }
+    .box1{
+        font-size: 1.5rem;
+        row-gap: 3rem;
+    }
+    .box2{
+        font-size: 1rem;
+    }
+
+}
+@media screen and (max-width:540px) {
+    .theme {
+        justify-content: center;
+
+        width:90%;
+        margin: 0;
+        gap: 3rem;
+    }
+    .hr{
+        width: 60%;
+    }
+    .flower{
+        top:15%;
+        height: 18rem;
+        width:18rem;
+    }
+    .box{
+        padding: 1.5rem;
+    }
+    .box1{
+        font-size: 1rem;
+    }
+    .box2{
+        font-size: 12px;
+    }
+
 }
