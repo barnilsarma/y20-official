@@ -3,6 +3,7 @@
   height: 100vh;
   justify-content: center;
   background-image: linear-gradient(129deg, #ffa12d 19.04%, #358717 91.43%);
+  width: 100%;
 }
 .leftportion {
   display: flex;

@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600&display=swap");
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
+}
+.surrounder {
+  width: fit-content;
 }
 nav {
   z-index: 3;
@@ -12,6 +15,9 @@ nav {
   background-color: #ffffff;
   position: sticky;
   top: 0;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
   height: 6.6875rem;
   padding: 0.25rem 4.125rem 0.3125rem 3.5625rem;
   background-image: url("./NavBgLeft.svg"), url("./NavBgRight.svg");
@@ -56,38 +62,38 @@ nav .links #brochure {
   box-shadow: 0 0 10px #6a727e;
   padding: 0.5rem;
 }
-#mobile-nav{
-  position:fixed;
-  left:40vw;
-  z-index:4;
-  top:2rem;
-  width:50vw;
-  visibility:hidden;
+#mobile-nav {
+  position: sticky;
+  left: 50%;
+  z-index: 4;
+  top: -2rem;
+  width: 50vw;
+  visibility: hidden;
 }
-#mobile-nav .links{
-  position:absolute;
-  display:flex;
+#mobile-nav .links {
+  position: absolute;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center ;
+  align-items: center;
   background-color: #4c834a80;
-  height:60vh;
-  width:100%;
+  height: 60vh;
+  width: 100%;
   backdrop-filter: blur(2px);
 }
-#mobile-nav .links a{
+#mobile-nav .links a {
   font-family: "Plus Jakarta Sans", sans-serif;
   text-decoration: none;
   cursor: pointer;
   transition: ease 1000ms;
   background-color: transparent;
-  color:#ffffff;
-  visibility:'hidden';
+  color: #ffffff;
+  visibility: "hidden";
 }
-#mobile-nav .links [id*='mobile-links-']{
+#mobile-nav .links [id*="mobile-links-"] {
   visibility: hidden;
 }
-#mobile-nav .links #brochure-mobile{
+#mobile-nav .links #brochure-mobile {
   text-align: center;
   font-family: Plus Jakarta Sans;
   font-size: 1.5625rem;
@@ -100,27 +106,34 @@ nav .links #brochure {
   box-shadow: 0 0 10px #6a727e;
   padding: 0.5rem;
 }
-#hamburger{
+#hamburger {
+  visibility: hidden;
+  margin-right: 1rem;
   background-color: transparent;
-  border:0px solid transparent;
-  visibility:hidden;
+  border: 0px solid transparent;
+  visibility: hidden;
+  position: absolute;
+  left: 40%;
+  top: -5rem;
+  z-index: 5;
 }
-#hamburger img{
-  position:relative;
-  margin-left:12rem;
+#hamburger img {
   background-color: transparent;
   padding: 0.4rem;
   font-size: 1rem;
   font-family: "plus jakarta sans", sans-serif;
-  height:2rem;
-  width:2rem;
+  height: 2rem;
+  width: 2rem;
 }
-.sponsors {
-  text-align: center;
-}
+
 .events {
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
+}
+.events .surrounder {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .events h1 {
   width: 25.6875rem;
@@ -133,27 +146,40 @@ nav .links #brochure {
   line-height: normal;
   letter-spacing: 0.14063rem;
 }
-
-.sponsors marquee{
-  width:20rem;
+.sponsors {
+  text-align: center;
 }
-.sponsors h1 {
-  width: 25.6875rem;
-  height: 3.8125rem;
+.sponsors .surrounder {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.sponsors .surrounder h1 {
   color: #358717;
   font-family: Plus Jakarta Sans;
-  font-size: 2.8125rem;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.14063rem;
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
 }
 .sponsors-img {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding-left: 2%;
   padding-right: 2%;
+}
+/* .sponsors .surrounder {
+  margin-left: auto;
+  margin-right: auto;
+} */
+.sponsors .surrounder img {
+  width: 20rem;
 }
 .sponsors-img img {
   margin: 50px;
@@ -163,14 +189,17 @@ nav .links #brochure {
   border-radius: 12.9375rem;
   background-color: #65666d;
 }
-.surrounder {
-  width: 28.125rem;
-}
-.surrounder h1{
-  width:20rem;
-}
+
 .events {
+  position: relative;
   text-align: center;
+}
+
+.events .surrounder img {
+  width: 30vw;
+}
+.events .surrounder h1 {
+  width: fit-content;
 }
 .events .events-each {
   display: flex;
@@ -220,6 +249,7 @@ nav .links #brochure {
   justify-content: center;
   align-items: center;
 }
+
 .speakers .primary,
 .tertiary {
   display: flex;
@@ -227,6 +257,7 @@ nav .links #brochure {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: fit-content;
 }
 .speakers .each-speaker {
   display: flex;
@@ -244,9 +275,8 @@ nav .links #brochure {
   border-radius: 12.5rem;
   background-color: #6a727e;
 }
-.speakers h1 {
-  width: 25.6875rem;
-  height: 3.8125rem;
+.speakers .surrounder h1 {
+  width: fit-content;
   color: #358717;
   font-family: Plus Jakarta Sans;
   font-size: 2.8125rem;
@@ -255,66 +285,83 @@ nav .links #brochure {
   line-height: normal;
   letter-spacing: 0.14063rem;
 }
-footer{
+footer {
   font-family: Plus Jakarta Sans;
   background-color: #e3e3e4;
-  padding:2rem;
+  padding: 2rem;
+  font-size: small;
 }
-footer .part1{
-  display:flex;
-  flex-direction:row;
+footer .part1 {
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-footer .part1 .left img{
+footer .part1 .left img {
   width: 11.05194rem;
-height: 6.855rem;
-flex-shrink: 0;
+  height: 6.855rem;
+  flex-shrink: 0;
 }
-footer .part1 .right h1{
+footer .part1 .right h1 {
   color: #000;
-text-align: center;
-font-family: Plus Jakarta Sans;
-font-size: 1.875rem;
-font-style: normal;
-font-weight: 700;
-margin:1rem;
-letter-spacing: 0.09375rem;
-}footer .part1 p{
+  text-align: center;
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 700;
+  margin: 1rem;
+  letter-spacing: 0.09375rem;
+}
+footer .part1 p {
   color: #2b2b2ba2;
-text-align: center;
-font-family: Plus Jakarta Sans;
-font-size: 1.25rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.09375rem;
+  text-align: center;
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.09375rem;
 }
-footer .part1 .right .social-media-cont img{
+footer .part1 .right .social-media-cont img {
   width: 3.5rem;
-height: 2.625rem;
+  height: 2.625rem;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
+  .events .surrounder {
+    font-size: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #hamburger {
+    visibility: visible;
+  }
+  .sponsors .surrounder img {
+    width: 15vw;
+  }
+  .sponsors .surrounder {
+    position: relative;
+    left: 0rem;
+  }
   nav .links {
     visibility: hidden;
   }
   nav .links #brochure {
     background-color: #ffffff;
   }
-  .surrounder img{
-    width:80vw;
+  .surrounder img {
+    width: 80vw;
   }
   .sponsors-img {
     display: flex;
     flex-direction: column;
   }
-  #hamburger{
-    visibility:visible;
+
+  footer {
+    font-size: smaller;
   }
-  footer .part-1 {
+  footer .part1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 }
