@@ -59,14 +59,14 @@ body{
 }
 
 .fl1 {
-    background-image: url(assets/right\ flower.jpg);
+    background-image: url(sahin1.jpg);
     transform: rotateY(180deg);
     position: absolute;
     left: 0;
 }
 
 .fl2 {
-    background-image: url(assets/right\ flower.jpg);
+    background-image: url(sahin1.jpg);
     position: absolute;
     right: 0;
 }
@@ -144,7 +144,7 @@ body{
     .flower{
         height: 25rem;
         width:24rem;
-        background-image: url(assets/3489.jpg);
+        background-image: url(sahin2.jpg);
         animation: rotation 20s infinite linear;
     }
     .fl1{
