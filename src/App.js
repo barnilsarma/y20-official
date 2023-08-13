@@ -42,6 +42,9 @@ function OrganisingInstitutes() {
   );
 }
 function App() {
+  const heroCont = useRef(null);
+  const eventsCont = useRef(null);
+  const sponsorsCont = useRef(null);
   return (
     <div
       className="App"

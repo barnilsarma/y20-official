@@ -8,6 +8,9 @@
   background-position: left 110%, right 110%;
   background-repeat: no-repeat, no-repeat;
 }
+.unite .surrounder img {
+  height: 0.01rem;
+}
 .primary-unite-heading {
   margin-top: 2em;
   text-align: center;
@@ -27,7 +30,6 @@
 }
 .secondary-unite-heading {
   color: #000;
-  text-align: center;
   font-family: Plus Jakarta Sans;
   font-size: 2.812rem;
   font-style: normal;
@@ -37,6 +39,9 @@
   width: 50.562rem;
   margin: 0 auto;
   margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .unite-container {
   display: flex;
@@ -134,7 +139,7 @@
 
 @media screen and (max-width: 480px) {
   .unite-container {
-    margin-top: 5rem;
+    margin-top: 2rem;
     height: 42rem;
     margin-bottom: 15rem;
   }
@@ -142,6 +147,7 @@
     background-position: left 100%, right 100%;
     background-size: 16rem;
   }
+
   #container-2 {
     margin-top: 2rem;
   }
@@ -150,6 +156,9 @@
   }
   .unite-secondary-container {
     width: 20rem;
+    position: relative;
+    left: 0rem;
+    margin-top: 0rem;
   }
   .unite-container p {
     width: 14rem;
@@ -157,10 +166,12 @@
     font-size: 1.1rem;
   }
   .secondary-unite-heading {
-    width: 25rem;
-    font-size: 2rem;
+    position: relative;
+    top: -3rem;
+    width: 80vw;
+    font-size: 1.5rem;
   }
   .primary-unite-heading {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }

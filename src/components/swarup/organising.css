@@ -15,6 +15,9 @@
   margin-right: auto;
   text-align: center;
 }
+.Organising .surrounder img {
+  width: 40vw;
+}
 .Organising .Organise {
   display: flex;
   flex-direction: row;
@@ -23,11 +26,10 @@
   flex-wrap: wrap;
 }
 .Organising .Organise img {
-  width: 50vw;
-  height: 50vw;
+  width: 20vw;
+  height: 20vw;
   border: 0px solid transparent;
   border-radius: 50vw;
-  background-color: aqua;
 }
 @media screen and (max-width: 480px) {
   .Organising .surrounder {
@@ -36,9 +38,15 @@
     font-size: 3vw;
   }
   .Organising .surrounder img {
-    margin-right: 2rem;
+    width: 80vw;
   }
   .Organising .Organise {
     flex-direction: column;
+  }
+  .Organising .Organise img {
+    width: 50vw;
+    height: 50vw;
+    border: 0px solid transparent;
+    border-radius: 50vw;
   }
 }

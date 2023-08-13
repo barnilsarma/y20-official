@@ -98,16 +98,19 @@
   .hero {
     height: 85vh;
     justify-content: center;
+    padding-bottom: 5rem;
   }
   .leftportion {
-    margin-top: 20px;
+    margin-top: 2rem;
   }
   .toptxt {
-    font-size: 20px;
+    font-size: 2rem;
+    word-spacing: 0.5rem;
   }
 
   .bottomtxt {
-    font-size: 20px;
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .imagelogo {
@@ -125,10 +128,15 @@
   #think {
     max-width: 8em;
   }
+  #think {
+    position: relative;
+    top: -3rem;
+    margin-bottom: 2rem;
+  }
 
   .motto-container {
-    margin-top: 70px;
     flex-wrap: wrap;
+    margin-top: 5rem;
   }
   .motto-container img {
     width: 20rem;
