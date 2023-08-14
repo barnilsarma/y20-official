@@ -75,6 +75,7 @@ nav .links #brochure {
   border-radius: 50px;
   box-shadow: 0 0 10px #6a727e;
   padding: 0.5rem;
+  cursor: pointer;
 }
 #mobile-nav {
   position: sticky;
@@ -142,7 +143,14 @@ nav .links #brochure {
 
 .events {
   text-align: center;
-  padding: 1rem;
+}
+.events .green-filter {
+  background-color: rgba(38, 128, 90, 0.459);
+  margin: 0 auto;
+}
+.events .black-filter {
+  background-color: #0000006c;
+  margin: 0 auto;
 }
 .events .surrounder {
   margin-left: auto;

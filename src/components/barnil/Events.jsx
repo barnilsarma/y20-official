@@ -1,6 +1,9 @@
 import "./Nav_footer_events_sponsors_speakers.css";
 import Surround from "./surround.svg";
-
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cube";
 function Events() {
   const events_info = [
     {
@@ -48,7 +51,9 @@ function Events() {
           {events_info.map((item, index) => (
             <div
               className="event"
-              style={{ backgroundColor: `${item.background}` }}
+              style={{
+                backgroundColor: `${item.background}`,
+              }}
             >
               <div className="green-filter">
                 <div className="black-filter">

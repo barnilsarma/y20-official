@@ -8,15 +8,6 @@ function NavBar() {
   const ham = useRef(null);
   const navState = useRef(null);
   const hamClick = () => {
-    document.getElementById("mobile-links-1").style.visibility === "hidden"
-      ? (document.getElementById("mobile-links-1").style.visibility = "visible")
-      : (document.getElementById("mobile-links-1").style.visibility = "hidden");
-    document.getElementById("mobile-links-2").style.visibility === "hidden"
-      ? (document.getElementById("mobile-links-2").style.visibility = "visible")
-      : (document.getElementById("mobile-links-2").style.visibility = "hidden");
-    document.getElementById("mobile-links-3").style.visibility === "hidden"
-      ? (document.getElementById("mobile-links-3").style.visibility = "visible")
-      : (document.getElementById("mobile-links-3").style.visibility = "hidden");
     navState.current.style.visibility === "hidden"
       ? (navState.current.style.visibility = "visible")
       : (navState.current.style.visibility = "hidden");
@@ -39,7 +30,9 @@ function NavBar() {
           <Link to="sponsors" duration={500} smooth={true}>
             SPONSORS
           </Link>
-          <button id="brochure">BROCHURE</button>
+          <button id="brochure" style={{ cursor: "pointer" }}>
+            BROCHURE
+          </button>
         </div>
       </nav>
       <div id="mobile-nav">
@@ -47,16 +40,18 @@ function NavBar() {
           <img src={Hamburger} />
         </button>
         <div className="links" id="mobile-links" ref={navState}>
-          <a role="button" id="mobile-links-1">
+          <Link to="hero" duration={500} smooth={true}>
             HOME
-          </a>
-          <a role="button" id="mobile-links-2">
+          </Link>
+          <Link to="events" duration={500} smooth={true}>
             EVENTS
-          </a>
-          <a role="button" id="mobile-links-3">
+          </Link>
+          <Link to="sponsors" duration={500} smooth={true}>
             SPONSORS
-          </a>
-          <button id="brochure-mobile">BROCHURE</button>
+          </Link>
+          <button id="brochure" style={{ cursor: "pointer" }}>
+            BROCHURE
+          </button>
         </div>
       </div>
     </>
